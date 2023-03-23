@@ -6,11 +6,9 @@ console.log("Logs from your program will appear here!");
 
 const server = net.createServer((connection) => { //create a server and pass a callback function to handle connection
   // Handle connection
-  connection.on("data", (data) => { //connection is a socket , on data event means when data is received
     connection.on("data", () => {
         connection.write("+PONG\r\n");
     });
-  });   
 });
 
 
