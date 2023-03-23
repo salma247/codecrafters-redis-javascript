@@ -12,10 +12,10 @@ const server = net.createServer((connection) => { //create a server and pass a c
     const messageArray = message.split("\n"); //split the string into an array
     messageArray.forEach((message) => { //loop through the array
         if (message === "ping") { //if the message is ping
-            connection.write("pong\n"); //write pong
+            connection.write("+PONG\r\n"); //write pong
         }
     });
-    
+
   });   
 });
 
